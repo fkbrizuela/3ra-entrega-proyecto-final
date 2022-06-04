@@ -128,21 +128,87 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #4158D0;
-    background-image: linear-gradient(166deg, #4158D0 0%, #C850C0 46%, #030855 100%);
+    background-color: $color-secundario;
     padding: 12px;
     &__flex{
         @extend .containerFlex;
+        h3{
+            color: $color-letra;
+        }
     }
 }
 
 
 /* =====================         FOOTER           =========================== */
 
-footer {
-    background-color: #0b476f;
-    background-image: linear-gradient(180deg, #0b476f 0%, #041825 100%);   
+
+.container{
+    &__footer{
+    width: 100%;
+    background-color: #0a141d;
+    }
+    &__up{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:50px;
+        padding: 45px 0px;
+        &__uno{
+            figure{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 250px;
+                }
+            }
+        }
+        &__dos{
+            h2{
+                @extend .footer__h2;
+            }
+            p{
+                color: $color-letra;
+                margin-bottom: 10px;
+            }
+        }
+        &__tres{
+            a{
+                display: inline-block;
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                margin-right: 10px;
+                background-color: #0d2033;
+                border-radius: 6px;
+                padding: 5px;
+                img{
+                    width: 40px;
+                }
+            }
+            a:hover{
+                background-color: $color-sol;
+            }
+            h2{
+                @extend .footer__h2
+            }
+        }
+    }
+    &__down{
+        background-color: #0a1a2a;
+        padding: 15px 10px;
+        text-align: center;
+        color: #fff;
+        span{
+            font-size: 15px;
+        } 
+    }
 }
+
 
 
 /* =====================          GALERIA               ===================== */
@@ -152,10 +218,6 @@ footer {
     font-size: 4em;
     margin-top: 50px;
     color: $color-letra;
-}
-
-@mixin mixGrid (){
-
 }
 
 .grid{
@@ -250,7 +312,7 @@ footer {
     &__formulario{
         flex-basis: 80%;
         width: 60%;
-        background: #24303c;
+        background: $color-secundario;
         padding:30px;
         margin-top: 100px;
         margin-bottom: 100px;
