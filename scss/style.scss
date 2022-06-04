@@ -1,0 +1,373 @@
+@import 'variables';
+@import 'helper';
+@import 'parallax';
+@import 'header';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $letra-principal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* =====================          HEADER          =========================== */
+
+.presentacion{
+    @extend .containerFlex;
+    align-items: center;
+    height: 100vh;
+    &__container{
+        background-color: $background-opacity;
+        border-radius: 8px;
+        width: 40vw;
+    }
+    h2{
+        font-size: 3vw; 
+        text-align: center; 
+    }
+    p{
+        font-size: 1rem; 
+        text-align: center; 
+    }
+}
+
+/* =====================          MAIN            =========================== */
+
+/* --------- Evento -------------- */
+
+.evento{
+    padding: 16px;
+    &__grid {
+        display: grid;
+        grid-template-rows: 0.2fr 1fr 1fr 1fr ;
+        grid-template-columns: 0.4fr 0.6fr 1fr ;
+        grid-template-areas:"titulo titulo titulo"
+                            "aside foto_uno descripcion_uno"
+                            "aside foto_dos descripcion_dos"
+                            "aside foto_tres descripcion_tres";
+        gap: 1.5rem;
+        background-color: #f2f2f2;
+    }
+    &__titulo{
+        grid-area: titulo;
+        text-align: center;
+        margin:0.5rem
+    }
+    &__uno{
+        @include mixGrid (foto_uno, url(../recursos/grid_index/acuaridas.webp));
+    }
+    &__dos{
+        grid-area: descripcion_uno;
+    }
+    &__tres{
+        @include mixGrid (foto_dos, url(../recursos/grid_index/eclipse_lunar.jpg));
+    }
+    &__cuatro{
+        grid-area: descripcion_dos;
+    }
+    &__cinco{
+        @include mixGrid (foto_tres, url(../recursos/grid_index/luna_llena-2.jpg));
+    }
+    &__seis{
+        grid-area: descripcion_tres;
+    }
+    &__tituloSecundario{
+        text-align: center;
+        background: $background-opacity;
+        margin-top: 80%;
+    }
+    &__back{
+        background-size: cover;
+        background-position: center;
+        margin-top: 10px;
+    }
+    &__descripcion{
+        border-top: 1px solid #000;
+        padding-top: 10px;
+    }
+}
+
+/* * ============ ASIDE =========== */
+
+.menu{
+    position: sticky;
+    top: 15px;
+    &__evento{
+        grid-area: aside;
+        min-width: 30%;
+        background: $color-principal;
+        padding: 20px;
+        border-radius: 3px;
+    }
+    &__titulo {
+        font-family: $letra-secundaria;
+        font-weight: normal;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #f2f2f2;
+        }
+    &__indice{
+        a {
+            display: block;
+            margin-bottom: 1rem;
+            color: $color-sol;
+        }
+    }
+}    
+
+
+/* --------- Multimedia -------------- */
+
+.multimedia{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #4158D0;
+    background-image: linear-gradient(166deg, #4158D0 0%, #C850C0 46%, #030855 100%);
+    padding: 12px;
+    &__flex{
+        @extend .containerFlex;
+    }
+}
+
+
+/* =====================         FOOTER           =========================== */
+
+footer {
+    background-color: #0b476f;
+    background-image: linear-gradient(180deg, #0b476f 0%, #041825 100%);   
+}
+
+
+/* =====================          GALERIA               ===================== */
+
+.titulo__galeria{
+    text-align: center;
+    font-size: 4em;
+    margin-top: 50px;
+    color: $color-letra;
+}
+
+@mixin mixGrid (){
+
+}
+
+.grid{
+    &__container{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 15px;
+        padding: 16px;
+    }
+    &__item{
+        border: 5px solid;
+        transition: 1s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    &__uno{
+        grid-row: 1/3;
+        background-image: url(../recursos/galeria/cumuloGlaxias.jpg);
+    }
+    &__dos {
+        grid-column: 2/4;
+        background-image: url(../recursos/galeria/galaxia.jpg);
+    }
+    &__tres{
+        background-image: url(../recursos/galeria/astronauta.jpg);
+    }
+    &__cuatro {
+        grid-row: 2/4;
+        background-image: url(../recursos/galeria/nebulosaCono.jpg);
+    }
+    &__cinco{
+        grid-row: 3/4;
+        grid-column: 1/3;
+        background-image: url(../recursos/galeria/hubble.jpg);
+    }
+    &__seis{
+        background-image: url(../recursos/galeria/luna.jpg);
+    }
+    &__siete{
+        grid-row: 2/3;
+    }
+    &__ocho{
+        background-image: url(../recursos/galeria/jupiter.jpg);
+    }
+    &__nueve{
+        grid-row: 5/6;
+        grid-column: 2/5;
+        background-image: url(../recursos/galeria/saturno.jpg);
+    }
+    &__diez{
+        grid-row: 4/5;
+        grid-column: 2/3;
+    }
+    &__once{
+        grid-row: 4/6;
+        background-image: url(../recursos/galeria/nebulosaCangrejo.jpg);
+    }
+    &__doce{
+        grid-column: 3/5;
+        background-image: url(../recursos/galeria/universo.jpg);
+    }
+    &__back{
+        background-size: cover;
+        background-position: center;
+    }
+    &__estilo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        background: rgb(2,0,36);
+        background: linear-gradient(105deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    }
+    &__parrafo{
+        font-size: 1em;
+        font-family: $letra-secundaria;
+        background-color: rgba(255, 255, 255, 0.4);
+        border-radius: 5px;
+        padding: 1.5rem;
+    }
+}
+
+/* -------------------- pagina de contacto ------------------------------  */
+
+.contacto{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+    &__formulario{
+        flex-basis: 80%;
+        width: 60%;
+        background: #24303c;
+        padding:30px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        border-radius: 4px;
+        font-family: $letra-secundaria;
+        color: $color-letra;
+        box-shadow: 8px 24px 37px #000000;
+    }
+    &__btn{
+        background-color: #0b476f;
+        background-image: linear-gradient(180deg, #0b476f 0%, #041825 100%);   
+        border-radius: 8px;
+        color: $color-letra;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+    }
+    &__titulo{
+        color: $color-letra;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 8vw 
+    }
+    &__dato{
+        width: 100%;
+        border: 1px solid $color-letra;
+        background: #24303c;
+        padding: 10px;
+        font-family: $letra-secundaria;
+        font-size: 1rem;
+        color: $color-letra;
+    }
+    &__dato{
+        &__dos {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        &__tres {
+            margin-bottom: 10px;
+            p {
+                margin-top: 10px;
+                margin-bottom: 2px;
+            }
+        }
+    }
+}
+
+
+label{
+    color: $color-letra;
+}
+
+span{
+    color: $color-letra;
+}
+
+/*   ---------------    comunidad   ----------------------    */
+
+.comunidad{
+    &__container{
+        @extend .containerFlex;
+        flex-wrap: wrap;
+        align-content: center;
+        align-content: space-around;
+        padding: 0 1.5rem;
+    }
+    &__titulo{
+        text-align: center;
+        margin-top: 1rem;
+        color: $color-letra;
+    }
+    &__img{
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        margin-right: 1rem;
+    }
+    &__info{
+        display: flex;
+        margin-top: 1rem;
+        p{
+            text-align: center;
+            font-size: 1.2rem;
+            background-color: $background-opacity;
+            border-radius: 20px 20px 20px 0px;
+        }
+        a{
+            color:  $color-sol;
+            text-decoration: none;
+        }
+    }
+}
+
+/*   --------------------     informacion ---------------------   */
+
+.info{
+    margin: 20vh 0;
+    &__Container{
+        @extend .containerFlex;
+        margin-top: 3rem;
+        padding: 30px;
+        width: 100%;
+        height: 100vh;
+        img{
+            width: 100%;
+            border-radius: 10px;
+        }
+        h2{
+            color: $color-letra;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+@import 'mediaqueries';
+

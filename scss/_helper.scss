@@ -1,0 +1,17 @@
+.containerFlex{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin mixGrid ($area, $url){
+    grid-area: $area;
+    background-image: $url;
+}
+
+.backParallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

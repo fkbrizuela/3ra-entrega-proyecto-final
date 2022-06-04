@@ -1,0 +1,8 @@
+.parallax{
+    background-image: url("../recursos/imagen-principal-3.jpg");
+    @extend .backParallax;
+&__dos{
+    background-image: url("../recursos/imagen-principal.jfif");
+    @extend .backParallax;
+}
+}
