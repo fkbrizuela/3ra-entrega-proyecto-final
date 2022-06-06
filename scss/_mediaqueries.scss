@@ -18,15 +18,20 @@
         gap: 1rem;
     }
 
-    .multimedia__flex{
-        justify-content: center;
-        align-items: center;
+    .multimedia{
+        &__flex{
+            justify-content: center;
+            align-items: center;
+        }
+        &__video{
+            width: 350px;
+            height:250px;
+        }
+        &__descripcion{
+            width: 100%;
+        }
     }
 
-    .multimedia__video{
-        width: 350px;
-        height:250px;
-    }
 
     /* ------------ GALERIA --------------  */
 
@@ -42,8 +47,8 @@
     }
 
     /* ------------ Informacion --------------  */
-    .info__Container{
-        height: 50vh;
+    .info__ubicacion__descripcion{
+        width: 100%;
     }
     /* ------------ Comunidad ---------------  */
 
@@ -85,7 +90,7 @@
 }
 
 /*TABLET*/
-@media (min-width:701px) and (max-width:980px) {
+@media (min-width:701px) and (max-width:1100px) {
 
     .grid{
         &__container{
@@ -148,6 +153,12 @@
         &__doce{
             grid-column: 2/3;
             grid-row: 6/7;
+        }
+    }
+
+    .multimedia{
+        &__descripcion{
+            width: 82vw;
         }
     }
 }

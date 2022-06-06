@@ -127,13 +127,31 @@ html {
 .multimedia{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-content: center;
     background-color: $color-secundario;
     padding: 1.2rem;
     &__flex{
+        margin: 1rem;
+        @extend .containerFlex;
+        align-items: center;
+        h3{
+            color: $color-letra;
+        }
+    }
+    &__descripcion{
+        width: 40%;
+        margin: 1rem;
         @extend .containerFlex;
         h3{
             color: $color-letra;
+        }
+        p{
+            color: $color-letra;
+            display: inline-block;
+        }
+        a{
+            color: $color-sol;
         }
     }
 }
@@ -378,7 +396,6 @@ span{
         @extend .containerFlex;
         flex-wrap: wrap;
         align-content: center;
-        align-content: space-around;
         padding: 0 1.5rem;
     }
     &__titulo{
@@ -410,22 +427,46 @@ span{
 
 /*   --------------------     informacion ---------------------   */
 .info{
+    padding: 16px;
     background-color: $color-secundario;
+    &__card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #0a141d;
+        &__item{
+            margin: auto;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        
+        }
+    }
+    &__ubicacion{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 2rem;
+        border-top: 1px solid #fff;
+        background-color: $color-secundario;
+        &__descripcion{
+            width: 40%;
+            h3{
+                color: $color-letra;
+            }
+            p{
+                color: $color-letra;
+                display: inline-block;
+            }
+        }
+        &__map{
+            h3{
+                color: $color-letra;
+            }
+        }
+    }
 }
 
-.info__card{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.card__item{
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-
-}
 
 
 @import 'mediaqueries';
