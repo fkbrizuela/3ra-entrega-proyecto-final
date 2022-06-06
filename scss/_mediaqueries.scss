@@ -1,5 +1,5 @@
 /*CELULAR*/
-@media (min-width: 320px) and (max-width: 540px){ 
+@media (min-width: 320px) and (max-width: 700px){ 
 
     .presentacion h2{
         font-size: 1.2rem; 
@@ -18,6 +18,16 @@
         gap: 1rem;
     }
 
+    .multimedia__flex{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .multimedia__video{
+        width: 350px;
+        height:250px;
+    }
+
     /* ------------ GALERIA --------------  */
 
     .grid{
@@ -26,7 +36,7 @@
             flex-direction: column;
         }
         &__item{
-            border: 5px solid;
+            border: 5px solid #000;
             height: 40vh;
         }
     }
@@ -48,8 +58,18 @@
     }
 }
 
-/* Media FOOTER */
+/* Media FOOTER - NV*/
 @media (max-width:800px){
+
+    .nav{
+        &-item:hover{
+            background-color: #f2f2f2;
+            transform: scale(1);
+            transition: all 1.2s;
+            box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.3);
+        }
+    }
+
     .container__up{
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
@@ -65,7 +85,7 @@
 }
 
 /*TABLET*/
-@media (min-width:541px) and (max-width:980px) {
+@media (min-width:701px) and (max-width:980px) {
 
     .grid{
         &__container{

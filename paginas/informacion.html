@@ -19,7 +19,7 @@
     <link href="../css/estilos.css" type="text/css" rel="stylesheet">
     <title>Informacion general - Galaxy</title>
 </head>
-<body class="parallax__dos">
+<body class="">
     <header class="">
         <nav class="navbar navbar-expand-lg navbar-light nav__header" style="background-color: #f2f2f2;">
             <div class="container-fluid">
@@ -28,7 +28,7 @@
                 </a>
             </div>
             <div class="container-fluid">
-                <a class="navbar-brand  mb-0 h1" href="#">Galaxy.inc</a>
+                <a class="navbar-brand  mb-0 h1" href="../index.html">Galaxy.inc</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -55,10 +55,72 @@
         </nav>
     </header>
     <main class="info">
-        <div class="info__Container">
-            <h2> Carta celeste emisferio norte y sur</h2>
-            <img src="../recursos/informacion/Celestial_chart.png" alt="cartaCeleste">
-        </div>
+        <section class="carousel">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active carousel__uno">
+                        <img src="../recursos/informacion/telescopioUno.jpg" class="d-block w-100" alt="cielo nocturno">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Constelaciones</h2>
+                            <p>Como encontrar constalaciones usando la carta celeste del enmisferio sur.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item carousel__dos">
+                        <img src="../recursos/informacion/telescopioHubble.jpg" class="d-block w-100" alt="Hubble">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Telescopio Hubble</h2>
+                            <p>Las mejores imagenes captadas por el primer telescopio espacial.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item carousel__tres">
+                        <img src="../recursos/informacion/eclipseSol.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Eclipse Solar</h2>
+                            <p>De los fenomenos astronomicos más interesantes para ver.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section class="info__card">
+            <div class="card card__item" style="width: 18rem; height:28rem;">
+                <img src="../recursos/informacion/Celestial_chart.png" class="card-img-top" alt="carta celeste información">
+                <div class="card-body">
+                    <h2 class="card-title">Carta Celeste</h2>
+                    <p class="card-text">Carta moderna representativa de las áreas y los asterismos de las ochenta y ocho constelaciones reconocidas por la Unión Astronómica Internacional. El nombre de cada una de ellas se da en español...</p>
+                    <a href="https://upload.wikimedia.org/wikipedia/commons/1/1c/Celestial_chart_%28asterisms_and_areas%29_%28esp%29.png" class="btn btn-primary">ir</a>
+                </div>
+            </div>
+            <div class="card card__item" style="width: 18rem; height:28rem;">
+                <img src="../recursos/informacion/telescopioHubble.jpg" class="card-img-top" alt="telescopio hubble">
+                <div class="card-body">
+                    <h2 class="card-title">Telescopio Hubbble</h2>
+                    <p class="card-text">El telescopio espacial Hubble, órbita circular alrededor del planeta Tierra a 593 kilómetros sobre el nivel del mar...</p>
+                    <a href="https://es.wikipedia.org/wiki/Telescopio_espacial_Hubble" class="btn btn-primary">ir</a>
+                </div>
+            </div>
+            <div class="card card__item" style="width: 18rem; height:28rem;">
+                <img src="../recursos/informacion/diagrama-eclipse.jpg" class="card-img-top" alt="diagrama de eclipse">
+                <div class="card-body">
+                    <h2 class="card-title">¿Qué es un Eclipse Solar?</h2>
+                    <p class="card-text">La palabra eclipse proviene del griego “ékleipsis”, que quiere decir “desaparición” o “abandono”...</p>
+                    <a href="https://planetariochile.cl/eclipses/que-es-un-eclipse-solar/" class="btn btn-primary">ir</a>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="container__footer">
         <div class="container__up">
