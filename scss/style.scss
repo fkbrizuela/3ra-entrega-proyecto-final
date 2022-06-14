@@ -18,13 +18,15 @@ html {
 
 /* =====================          HEADER          =========================== */
 
+
+
 .presentacion{
     @extend .containerFlex;
     align-items: center;
     height: 100vh;
     &__container{
         background-color: $background-opacity;
-        border-radius: 8px;
+        border-radius: 1em;
         width: 40vw;
     }
     h2{
@@ -52,7 +54,7 @@ html {
                             "aside foto_dos descripcion_dos"
                             "aside foto_tres descripcion_tres";
         gap: 1.5rem;
-        background-color: #f2f2f2;
+        background-color: $color-fondo;
     }
     &__titulo{
         grid-area: titulo;
@@ -89,7 +91,7 @@ html {
     }
     &__descripcion{
         border-top: 1px solid #000;
-        padding-top: 10px;
+        padding-top: 1rem;
     }
 }
 
@@ -97,20 +99,20 @@ html {
 
 .menu{
     position: sticky;
-    top: 15px;
+    top: 1rem;
     &__evento{
         grid-area: aside;
         min-width: 30%;
         background: $color-principal;
-        padding: 20px;
-        border-radius: 3px;
+        padding: 1.5rem;
+        border-radius: 0.2rem;
     }
     &__titulo {
         font-family: $letra-secundaria;
         font-weight: normal;
         font-size: 2rem;
         margin-bottom: 1.5rem;
-        color: #f2f2f2;
+        color: $color-fondo;
         }
     &__indice{
         a {
@@ -167,12 +169,11 @@ html {
     }
     &__up{
         width: 100%;
-        max-width: 1200px;
         margin: auto;
         display:grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap:50px;
-        padding: 45px 0px;
+        grid-gap: 4rem;
+        padding: 3rem 0rem;
         &__uno{
             figure{
                 width: 100%;
@@ -181,7 +182,7 @@ html {
                 justify-content: center;
                 align-items: center;
                 img{
-                    width: 250px;
+                    width: 12rem;
                 }
             }
         }
@@ -191,21 +192,20 @@ html {
             }
             p{
                 color: $color-letra;
-                margin-bottom: 10px;
+                margin-bottom: 1rem;
             }
         }
         &__tres{
             a{
                 display: inline-block;
-                width: 45px;
-                height: 45px;
-                line-height: 45px;
-                margin-right: 10px;
-                background-color: #0d2033;
-                border-radius: 6px;
-                padding: 5px;
+                width: 3rem;
+                height: 3rem;
+                margin-right: 0.8rem;
+                background-color: $color-principal;
+                border-radius: 0.5rem;
+                padding: 0.3rem;
                 img{
-                    width: 40px;
+                    width: 3rem;
                 }
             }
             a:hover{
@@ -217,12 +217,12 @@ html {
         }
     }
     &__down{
-        background-color: #0a1a2a;
-        padding: 15px 10px;
+        background-color: $color-secundario;
+        padding: 1rem 0.6rem;
         text-align: center;
-        color: #fff;
+        color: $color-letra;
         span{
-            font-size: 15px;
+            font-size: 1rem;
         } 
     }
 }
@@ -234,7 +234,7 @@ html {
 .titulo__galeria{
     text-align: center;
     font-size: 4em;
-    margin-top: 50px;
+    margin-top: 3rem;
     color: $color-letra;
 }
 
@@ -243,7 +243,7 @@ html {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 15px;
+        gap: 1rem;
         padding: 16px;
     }
     &__item{
@@ -331,50 +331,42 @@ html {
         flex-basis: 80%;
         width: 60%;
         background: $color-secundario;
-        padding:30px;
-        margin-top: 100px;
-        margin-bottom: 100px;
-        border-radius: 4px;
+        padding:3rem;
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+        border-radius: 0.2rem;
         font-family: $letra-secundaria;
         color: $color-letra;
-        box-shadow: 8px 24px 37px #000000;
+        box-shadow: 1rem 2.5rem 3.5rem #000000;
     }
     &__btn{
-        background-color: #0b476f;
-        background-image: linear-gradient(180deg, #0b476f 0%, #041825 100%);   
-        border-radius: 8px;
-        color: $color-letra;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 1rem;
+        @extend .botones;
     }
     &__titulo{
         color: $color-letra;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
         font-size: 8vw 
     }
     &__dato{
         width: 100%;
         border: 1px solid $color-letra;
         background: #24303c;
-        padding: 10px;
+        padding: 1rem;
         font-family: $letra-secundaria;
         font-size: 1rem;
         color: $color-letra;
     }
     &__dato{
         &__dos {
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
         &__tres {
-            margin-bottom: 10px;
+            margin-bottom: 1rem;
             p {
-                margin-top: 10px;
-                margin-bottom: 2px;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
         }
     }
@@ -396,7 +388,7 @@ span{
         @extend .containerFlex;
         flex-wrap: wrap;
         align-content: center;
-        padding: 0 1.5rem;
+        padding: 0 2rem;
     }
     &__titulo{
         text-align: center;
@@ -404,9 +396,9 @@ span{
         color: $color-letra;
     }
     &__img{
-        width: 100px;
-        height: 100px;
-        border-radius: 10px;
+        width: 9rem;
+        height: 9rem;
+        border-radius: 1rem;
         margin-right: 1rem;
     }
     &__info{
@@ -417,6 +409,7 @@ span{
             font-size: 1.2rem;
             background-color: $background-opacity;
             border-radius: 20px 20px 20px 0px;
+            padding: 1rem;
         }
         a{
             color:  $color-sol;
@@ -439,7 +432,8 @@ span{
             margin: auto;
             margin-top: 2rem;
             margin-bottom: 2rem;
-        
+            width: 20rem;
+            height: 27rem;
         }
     }
     &__ubicacion{
@@ -466,8 +460,13 @@ span{
         }
     }
 }
+.btn{
+    @extend .botones;
+}
 
-
+.card-body{
+    padding: 1em;
+}
 
 @import 'mediaqueries';
 

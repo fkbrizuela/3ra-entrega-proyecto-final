@@ -21,3 +21,16 @@
     margin-bottom: 25px;
     font-size: 20px;
 }
+
+.botones{
+    background-color: $color-secundario;
+    background-image: linear-gradient(180deg, $color-principal 0%, $color-terciario 100%);   
+    border-radius: 0.5rem;
+    color: $color-letra;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 1rem;
+    height: 3rem;
+    padding: 0.5rem;
+}

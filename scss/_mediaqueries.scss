@@ -1,23 +1,38 @@
 /*CELULAR*/
-@media (min-width: 320px) and (max-width: 700px){ 
+@media (min-width: 300px) and (max-width: 700px){ 
 
-    .presentacion h2{
-        font-size: 1.2rem; 
+    .nav{
+        &-item:hover{
+            transform: scale(0.9);
+        }
     }
+
+/****** header index ************* */
+    .presentacion {
+        height: 40vh;
+        h2{
+            font-size: 1.2rem; 
+        }
+    }
+/********* Aside ***************/
+    .menu{
+        position: relative;
+    }
+/******* Sección Eventos  **********/
     .evento__grid {
-        grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr 0.6fr 0.3fr;
+        grid-template-rows: 0.3fr 0.1fr 1fr 1fr 1fr 1fr 1fr 0.6fr;
         grid-template-columns: 1fr ;
-        grid-template-areas:"titulo"
+        grid-template-areas:"aside"
+                            "titulo"
                             "foto_uno" 
                             "descripcion_uno"
                             "foto_dos" 
                             "descripcion_dos"
                             "foto_tres"
-                            "descripcion_tres"
-                            "aside";
+                            "descripcion_tres";
         gap: 1rem;
     }
-
+/******** sección multimedia ****************/
     .multimedia{
         &__flex{
             justify-content: center;
@@ -47,8 +62,14 @@
     }
 
     /* ------------ Informacion --------------  */
-    .info__ubicacion__descripcion{
-        width: 100%;
+    .info{
+        &__ubicacion__descripcion{
+            width: 100%;
+        }
+        &__card__item{
+            width: 21rem;
+            height: 26rem;
+        }
     }
     /* ------------ Comunidad ---------------  */
 
@@ -66,15 +87,6 @@
 /* Media FOOTER - NV*/
 @media (max-width:800px){
 
-    .nav{
-        &-item:hover{
-            background-color: #f2f2f2;
-            transform: scale(1);
-            transition: all 1.2s;
-            box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.3);
-        }
-    }
-
     .container__up{
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
@@ -91,6 +103,15 @@
 
 /*TABLET*/
 @media (min-width:701px) and (max-width:1100px) {
+
+    .nav{
+        &-item:hover{
+            transform: scale(0.9);
+        }
+        &__hambur{
+            margin-left: 35vw;
+        }
+    }
 
     .grid{
         &__container{
