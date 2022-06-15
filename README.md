@@ -1,12 +1,8 @@
 # Proyecto Final
 Este es un proyecto dedicado a la creación de un blog sobre astronomía
 con una finalidad plenamente educativa y abocada a la divulgación científica
-Un sitio web que consta de 5 diferentes paginas divididas en:
-*Index
-*Comunidad
-*Galeria
-*Contacto
-*Información
+Un sitio web que consta de 5 diferentes paginas divididas en: Index - Comunidad -
+Galeria - Contacto - Información
 
 Cada una de ellas trata o muestra temas diferentes y a su vez cada una se divide
 en diferentes secciones
